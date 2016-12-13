@@ -97,16 +97,40 @@ describe('ShoppingListItem', function(){
 
 //ShoppingList is a class
 
+describe('ShoppingList', ()=>{
+
+  let sl = new ShoppingList();
+
+//ShoppingList is a class
+
+  it('should be a class', ()=>{
+    ShoppingList.should.be.a.function;
+  });
+
 //ShoppingList has a property named items
 
 //ShoppingList has a constructor method that initializes items as an empty Array
 
+  it('should have a property named "items" to be an empty "array"',()=>{
+    expect(sl).to.have.property('items').to.be.an('array');
+  });
+
 //ShoppingList has a method named addItem that accepts a single ShoppingListItem argument
+/*
+  it('should have a "addItem" method that accepts a single ShoppingListItem as an argument', ()=>{
+    expect('addItem').to.be.a.function();
+  });
 
 //invoking the addItem method by passing in a ShoppingListItem object should add that object to the items array
+  it('should have a method named "addItem" that accepts a single ShoppingListItem argument');
+  expect(sl).to.have.property('ShoppingListItem');
 
 //invoking the addItem method by passing in anything else that is not a ShoppingListItem object should immediately throw an error
-
+  it('should throw an error when invoking the "addItem method',()=>{
+    if('this.item')
+    expect(sl).to.throw(Error);
+  });
+*/
 //ShoppingList has a method named removeItem that accepts a single ShoppingListItem argument
 
 //invoking the removeItem method by passing in a ShoppingListItem object (that exists in the items array) should remove that object from the items array
@@ -118,3 +142,4 @@ describe('ShoppingListItem', function(){
 //ShoppingList has a method named render
 
 //calling the instance's render method will concatenate the result of calling render() on each item in this object's items array, wrapping it in a <ul> tags, and returning an html formatted string. ex: <ul>...[all the li elements from ShoppingListItem.render()]...</ul>
+});

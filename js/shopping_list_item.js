@@ -1,5 +1,4 @@
 /*jshint esversion: 6*/
-//SLT points here
 
 class ShoppingListItem {
   constructor (name, description) {
@@ -20,4 +19,13 @@ class ShoppingListItem {
     
   }
 
+}
+
+class ShoppingList {
+  constructor () {
+    this.items = [];
+    this.addItem = _ =>{
+
+    };
+  }
 }
