@@ -71,22 +71,31 @@ describe('ShoppingListItem', function(){
     });
   });
 
-
   //ShoppingListItem has a method named render
 
-      //calling the instance's render method will construct and return an html formatted string. the string content will be wrapped in <li> tags. <li class="completed_[is_done]"><span>[name]</span> <span>[description]</span></li>. example: <li class="completed_false"><span>Avocado</span> <span>Must be eaten immediately.</span></li>
+      /*calling the instance's render method will construct and return an html formatted string. the string content will be wrapped in <li> tags.
+      example: 
+      <li class="completed_false">
+        <span>Avocado</span>
+        <span>Must be eaten immediately.</span>
+      </li>;*/
 
     //hint: Use ES6 string templates for your render method
 
+  describe('render', function(){
+    it('should have a method named "render"', function(){
+/*      let newLi = document.createElement('li');
+      let newSpan = document.createElement('span');
+      newLi.appendChild(newSpan);
 
+      let currentDiv = document.getElementById('');
+      document.body.insertBefore(newLi, currentDiv);*/
+    });
+  });
 
 });
 
-
-
-
-
-//ShoppingListItem is a class
+//ShoppingList is a class
 
 //ShoppingList has a property named items
 

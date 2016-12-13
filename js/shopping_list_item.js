@@ -16,4 +16,8 @@ class ShoppingListItem {
     this.is_done = false;
   }
 
+  render(){
+    
+  }
+
 }
