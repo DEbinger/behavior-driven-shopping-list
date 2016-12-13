@@ -74,7 +74,7 @@ describe('ShoppingListItem', function(){
   //ShoppingListItem has a method named render
 
       /*calling the instance's render method will construct and return an html formatted string. the string content will be wrapped in <li> tags.
-      example: 
+      example:
       <li class="completed_false">
         <span>Avocado</span>
         <span>Must be eaten immediately.</span>
@@ -99,31 +99,35 @@ describe('ShoppingListItem', function(){
 
 describe('ShoppingList', ()=>{
 
-  let sl = new ShoppingList(items);
-
 //ShoppingList is a class
 
   it('should be a class', ()=>{
     ShoppingList.should.be.a.function;
   });
 
+  it('should have a property named items',()=>{
+    ShoppingList.should.have.a.property('items');
+  });
+
+  it('should contain an empty array', ()=> {
+    ShoppingList.items.should.be.an('array');
+  });
 //ShoppingList has a property named items
 
 //ShoppingList has a constructor method that initializes items as an empty Array
 
-  it('should have a property named "items" to be an empty "array"',()=>{
-    expect(sl).to.have.property('items').to.be.an('array');
+/*  it('should have a property named "items" to be an empty "array"',()=>{
+    expect(ShoppingList).to.have.property('items').to.be.a('array');
   });
-
+*/
 //ShoppingList has a method named addItem that accepts a single ShoppingListItem argument
 
-  it('should have a "addItem" method that accepts a single ShoppingListItem as an argument', ()=>{
-    expect('addItem').to.be.a.function();
-  });
-
-    it('should be an instance of ShoppingListItem', () => {
-    item.should.be.an.instanceof(ShoppingListItem);
-  });
+/*  it('should have a "addItem" method that accepts single ShoppingListItem as an argument', ()=>{
+   ShoppingList.addItem.should.be.a('function');
+  });*/
+/*  it('should be an instance of ShoppingListItem', () => {
+  item.should.be.an.instanceof(ShoppingListItem);
+  });*/
 /*
   it('should have a method "addItem" that accepts a single ShoppingListItem as an argument', function(){
     expect(addItem).to.have.property('');
