@@ -6,6 +6,8 @@ const expect = chai.expect;
 
 describe('ShoppingListItem', function(){
 
+  let sli = new ShoppingListItem();
+
   //ShoppingListItem should be a class
 
   it('should be a class', function(){
@@ -15,18 +17,20 @@ describe('ShoppingListItem', function(){
   //ShoppingListItem has a property named name
 
   it('should have a property named "name"', function(){
-    expect(ShoppingListItem).to.have.property('name');
-  });
-
-  //DON'T REMOVE
-  it('setting ShoppingList.name should set instance\'s name', function (){
-    let nickItem = new ShoppingListItem("nick");
-    expect (nickItem.name).to.equal("nick");
+    expect (sli).to.have.property('name');
   });
 
   //ShoppingListItem has a property named description
 
+  it('should have a property named "description"', function(){
+    expect(sli).to.have.property('description');
+  });
+
   //ShoppingListItem has a property named is_done
+
+  it('should have a property named "is_done"', function(){
+    expect(sli).to.have.property('is_done');
+  });
 
   //ShoppingListItem has a constructor method that accepts 2 arguments, name and description
 
