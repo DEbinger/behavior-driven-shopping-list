@@ -95,16 +95,9 @@ describe('ShoppingListItem', ()=>{
 
 });
 
-//ShoppingList is a class
+
 
 describe('ShoppingList', ()=>{
-
-<<<<<<< HEAD
-=======
-  let sl = new ShoppingList();
-
->>>>>>> e70a05c1d2da9c924c2d1466c24ffef224cb9e3e
-//ShoppingList is a class
 
   it('should be a class', ()=>{
     ShoppingList.should.be.a.function;
@@ -117,50 +110,12 @@ describe('ShoppingList', ()=>{
   it('should contain an empty array', ()=> {
     ShoppingList.items.should.be.an('array');
   });
-//ShoppingList has a property named items
 
-//ShoppingList has a constructor method that initializes items as an empty Array
-
-/*  it('should have a property named "items" to be an empty "array"',()=>{
-    expect(ShoppingList).to.have.property('items').to.be.a('array');
-  });
-*/
-//ShoppingList has a method named addItem that accepts a single ShoppingListItem argument
-
-<<<<<<< HEAD
-/*  it('should have a "addItem" method that accepts single ShoppingListItem as an argument', ()=>{
-   ShoppingList.addItem.should.be.a('function');
-  });*/
-/*  it('should be an instance of ShoppingListItem', () => {
-  item.should.be.an.instanceof(ShoppingListItem);
-  });*/
-/*
-  it('should have a method "addItem" that accepts a single ShoppingListItem as an argument', function(){
-    expect(addItem).to.have.property('');
-  });
-*/
-=======
-  describe('addItem', ()=>{
-    it('should have a method named "addItem" that accepts a single ShoppingListItem as an argument', ()=>{
-      ShoppingList.addItem().should.be.a.function;
-    });
-      it('should be an instance of ShoppingListItem', ()=>{
-      item.should.be.an.instanceof(ShoppingListItem);
-    });
+  it('should have a method named addItem', ()=>{
+    ShoppingList.addItem.should.be.a('function');
   });
 
 
->>>>>>> e70a05c1d2da9c924c2d1466c24ffef224cb9e3e
-//invoking the addItem method by passing in a ShoppingListItem object should add that object to the items array
-/*  it('should have a method named "addItem" that accepts a single ShoppingListItem argument');
-  expect(sl).to.have.property('ShoppingListItem');
-
-//invoking the addItem method by passing in anything else that is not a ShoppingListItem object should immediately throw an error
-  it('should throw an error when invoking the "addItem method',()=>{
-    if('this.item')
-    expect(sl).to.throw(Error);
-  });
-*/
 //ShoppingList has a method named removeItem that accepts a single ShoppingListItem argument
 
 //invoking the removeItem method by passing in a ShoppingListItem object (that exists in the items array) should remove that object from the items array
