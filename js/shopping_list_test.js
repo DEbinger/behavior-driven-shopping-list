@@ -4,31 +4,31 @@ const should = chai.should();
 const expect = chai.expect;
 
 
-describe('ShoppingListItem', function(){
+describe('ShoppingListItem', ()=>{
 
   let sli = new ShoppingListItem('dildo', 'phallic');
 
   //ShoppingListItem should be a class
 
-  it('should be a class', function(){
+  it('should be a class', ()=>{
     ShoppingListItem.should.be.a.function;
   });
 
   //ShoppingListItem has a property named name
 
-  it('should have a property named "name"', function(){
+  it('should have a property named "name"', ()=>{
     expect (sli).to.have.property('name');
   });
 
   //ShoppingListItem has a property named description
 
-  it('should have a property named "description"', function(){
+  it('should have a property named "description"', ()=>{
     expect(sli).to.have.property('description');
   });
 
   //ShoppingListItem has a property named is_done
 
-  it('should have a property named "is_done"', function(){
+  it('should have a property named "is_done"', ()=>{
     expect(sli).to.have.property('is_done');
   });
 
@@ -38,7 +38,7 @@ describe('ShoppingListItem', function(){
 
     //the constructor method sets the new instances name and description properties using the arguments passed in
 
-  it('should have a constructor method that accepts two arguments: "name" and "description"', function(){
+  it('should have a constructor method that accepts two arguments: "name" and "description"', ()=>{
     expect(sli).to.have.property('name');
     expect(sli).to.have.property('description');
   });
@@ -47,11 +47,11 @@ describe('ShoppingListItem', function(){
 
     //calling the instance's check method will set it's is_done property to true
 
-  describe('check', function(){
-    it('should have a method named "check"', function(){
+  describe('check', ()=>{
+    it('should have a method named "check"', ()=>{
       expect(sli.check).to.be.a('function');
     });
-    it('should set "is_done" property to "true"', function(){
+    it('should set "is_done" property to "true"', ()=>{
       sli.check();
       expect(sli.is_done).to.equal(true);
     });
@@ -61,11 +61,11 @@ describe('ShoppingListItem', function(){
 
       //calling the instance's uncheck method will set it's is_done property to false
 
-  describe('uncheck', function(){
-    it('should have a method named "uncheck"', function(){
+  describe('uncheck', ()=>{
+    it('should have a method named "uncheck"', ()=>{
       expect(sli.uncheck).to.be.a('function');
     });
-    it('should set "is_done" property to "false"', function(){
+    it('should set "is_done" property to "false"', ()=>{
       sli.uncheck();
       expect(sli.is_done).to.equal(false);
     });
@@ -82,14 +82,14 @@ describe('ShoppingListItem', function(){
 
     //hint: Use ES6 string templates for your render method
 
-  describe('render', function(){
-    it('should have a method named "render"', function(){
-/*      let newLi = document.createElement('li');
+  describe('render', () => {
+    it('should have a method named "render"', ()=>{
+      let newLi = document.createElement('li');
       let newSpan = document.createElement('span');
       newLi.appendChild(newSpan);
 
       let currentDiv = document.getElementById('');
-      document.body.insertBefore(newLi, currentDiv);*/
+      document.body.insertBefore(newLi, currentDiv);
     });
   });
 
@@ -99,6 +99,11 @@ describe('ShoppingListItem', function(){
 
 describe('ShoppingList', ()=>{
 
+<<<<<<< HEAD
+=======
+  let sl = new ShoppingList();
+
+>>>>>>> e70a05c1d2da9c924c2d1466c24ffef224cb9e3e
 //ShoppingList is a class
 
   it('should be a class', ()=>{
@@ -122,6 +127,7 @@ describe('ShoppingList', ()=>{
 */
 //ShoppingList has a method named addItem that accepts a single ShoppingListItem argument
 
+<<<<<<< HEAD
 /*  it('should have a "addItem" method that accepts single ShoppingListItem as an argument', ()=>{
    ShoppingList.addItem.should.be.a('function');
   });*/
@@ -133,6 +139,18 @@ describe('ShoppingList', ()=>{
     expect(addItem).to.have.property('');
   });
 */
+=======
+  describe('addItem', ()=>{
+    it('should have a method named "addItem" that accepts a single ShoppingListItem as an argument', ()=>{
+      ShoppingList.addItem().should.be.a.function;
+    });
+      it('should be an instance of ShoppingListItem', ()=>{
+      item.should.be.an.instanceof(ShoppingListItem);
+    });
+  });
+
+
+>>>>>>> e70a05c1d2da9c924c2d1466c24ffef224cb9e3e
 //invoking the addItem method by passing in a ShoppingListItem object should add that object to the items array
 /*  it('should have a method named "addItem" that accepts a single ShoppingListItem argument');
   expect(sl).to.have.property('ShoppingListItem');
