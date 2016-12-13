@@ -47,7 +47,7 @@ describe('ShoppingListItem', () => {
 
     //calling the instance's check method will set it's is_done property to true
 
-  describe('check', function(){
+  describe('check', () => {
     it('should have a method named "check"', () => {
       expect(sli.check).to.be.a('function');
     });
@@ -99,7 +99,7 @@ describe('ShoppingListItem', () => {
 
 describe('ShoppingList', ()=>{
 
-  let sl = new ShoppingList(items);
+  let sl = new ShoppingList('items');
 
 //ShoppingList is a class
 

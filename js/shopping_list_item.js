@@ -21,11 +21,3 @@ class ShoppingListItem {
 
 }
 
-class ShoppingList {
-  constructor () {
-    this.items = [];
-    this.addItem = _ =>{
-
-    };
-  }
-}
