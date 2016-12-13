@@ -121,7 +121,9 @@ describe('ShoppingList', ()=>{
     ShoppingList.items.should.contain(slItem);
   });
 
-
+  it('shoud have a method named removeItem',()=>{
+    ShoppingList.removeItem.should.be.a('function');
+  });
 //ShoppingList has a method named removeItem that accepts a single ShoppingListItem argument
 
 //invoking the removeItem method by passing in a ShoppingListItem object (that exists in the items array) should remove that object from the items array
