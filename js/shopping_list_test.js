@@ -115,6 +115,12 @@ describe('ShoppingList', ()=>{
     ShoppingList.addItem.should.be.a('function');
   });
 
+  it('should add SLItem to the array', ()=>{
+    let slItem = new ShoppingListItem('SLItem', 'Item to add to shopping list');
+    ShoppingList.addItem(slItem);
+    ShoppingList.items.should.contain(slItem);
+  });
+
 
 //ShoppingList has a method named removeItem that accepts a single ShoppingListItem argument
 
