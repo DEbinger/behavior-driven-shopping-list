@@ -6,7 +6,7 @@ const expect = chai.expect;
 
 describe('ShoppingListItem', function(){
 
-  let sli = new ShoppingListItem();
+  let sli = new ShoppingListItem('dildo', 'phallic');
 
   //ShoppingListItem should be a class
 
@@ -38,19 +38,47 @@ describe('ShoppingListItem', function(){
 
     //the constructor method sets the new instances name and description properties using the arguments passed in
 
+  it('should have a constructor method that accepts two arguments: "name" and "description"', function(){
+    expect(sli).to.have.property('name');
+    expect(sli).to.have.property('description');
+  });
+
   //ShoppingListItem has a method named check
 
-      //calling the instance's check method will set it's is_done property to true
+    //calling the instance's check method will set it's is_done property to true
+
+  describe('check', function(){
+    it('should have a method named "check"', function(){
+      expect(sli.check).to.be.a('function');
+    });
+    it('should set "is_done" property to "true"', function(){
+      sli.check();
+      expect(sli.is_done).to.equal(true);
+    });
+  });
 
   //ShoppingListItem has a method named uncheck
 
       //calling the instance's uncheck method will set it's is_done property to false
+
+  describe('uncheck', function(){
+    it('should have a method named "uncheck"', function(){
+      expect(sli.uncheck).to.be.a('function');
+    });
+    it('should set "is_done" property to "false"', function(){
+      sli.uncheck();
+      expect(sli.is_done).to.equal(false);
+    });
+  });
+
 
   //ShoppingListItem has a method named render
 
       //calling the instance's render method will construct and return an html formatted string. the string content will be wrapped in <li> tags. <li class="completed_[is_done]"><span>[name]</span> <span>[description]</span></li>. example: <li class="completed_false"><span>Avocado</span> <span>Must be eaten immediately.</span></li>
 
     //hint: Use ES6 string templates for your render method
+
+
 
 });
 
