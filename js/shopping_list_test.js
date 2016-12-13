@@ -99,7 +99,7 @@ describe('ShoppingListItem', () => {
 
 describe('ShoppingList', ()=>{
 
-  let sl = new ShoppingList();
+  let sl = new ShoppingList(items);
 
 //ShoppingList is a class
 
@@ -116,13 +116,21 @@ describe('ShoppingList', ()=>{
   });
 
 //ShoppingList has a method named addItem that accepts a single ShoppingListItem argument
-/*
+
   it('should have a "addItem" method that accepts a single ShoppingListItem as an argument', ()=>{
     expect('addItem').to.be.a.function();
   });
 
+    it('should be an instance of ShoppingListItem', () => {
+    item.should.be.an.instanceof(ShoppingListItem);
+  });
+/*
+  it('should have a method "addItem" that accepts a single ShoppingListItem as an argument', function(){
+    expect(addItem).to.have.property('');
+  });
+*/
 //invoking the addItem method by passing in a ShoppingListItem object should add that object to the items array
-  it('should have a method named "addItem" that accepts a single ShoppingListItem argument');
+/*  it('should have a method named "addItem" that accepts a single ShoppingListItem argument');
   expect(sl).to.have.property('ShoppingListItem');
 
 //invoking the addItem method by passing in anything else that is not a ShoppingListItem object should immediately throw an error
