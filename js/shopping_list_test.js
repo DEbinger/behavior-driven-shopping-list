@@ -96,12 +96,12 @@ describe('ShoppingList', ()=>{
 
 //ShoppingList has a constructor method that initializes items as an empty Array
 
-/*  it('should have a property named "items" to be an empty "array"',()=>{
+  it('should have a property named "items" to be an empty "array"',()=>{
     expect(sl).to.have.property('items').to.be.an('array');
   });
 
 //ShoppingList has a method named addItem that accepts a single ShoppingListItem argument
-
+/*
   it('should have a "addItem" method that accepts a single ShoppingListItem as an argument', ()=>{
     expect('addItem').to.be.a.function();
   });
@@ -114,8 +114,8 @@ describe('ShoppingList', ()=>{
   it('should throw an error when invoking the "addItem method',()=>{
     if('this.item')
     expect(sl).to.throw(Error);
-  });*/
-
+  });
+*/
 //ShoppingList has a method named removeItem that accepts a single ShoppingListItem argument
 
 //invoking the removeItem method by passing in a ShoppingListItem object (that exists in the items array) should remove that object from the items array
