@@ -15,4 +15,17 @@ class ShoppingListItem {
     this.is_done = false;
   }
 
+  render(){
+
+  }
+
+}
+
+class ShoppingList {
+  constructor () {
+    this.items = [];
+    this.addItem = _ =>{
+
+    };
+  }
 }
