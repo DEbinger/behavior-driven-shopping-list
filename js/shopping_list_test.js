@@ -18,6 +18,7 @@ describe('ShoppingListItem', function(){
     expect(ShoppingListItem).to.have.property('name');
   });
 
+  //DON'T REMOVE
   it('setting ShoppingList.name should set instance\'s name', function (){
     let nickItem = new ShoppingListItem("nick");
     expect (nickItem.name).to.equal("nick");
