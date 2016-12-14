@@ -1,6 +1,6 @@
 /*jshint esversion: 6*/
 
-class ShoppingList{
+class ShoppingList {
   constructor(items) {
     this.items = [];
   }
@@ -24,6 +24,10 @@ class ShoppingList{
   }
 
   render(){
-
+    let renderList = '';
+    for (var i = 0; i < this.items.length; i++) {
+    renderList += this.items[i].render();
+  }
+   return `<ul>${newList}</ul>`;
   }
 }

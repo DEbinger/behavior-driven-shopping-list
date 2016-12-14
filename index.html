@@ -11,11 +11,11 @@
   <script type="text/javascript" src="js/shopping_list_item.js"></script>
 
     <div id="content"></div>
-      <button id="add_shopping_list_item_button" >Add to Shopping List</button>
+      <button id="add_shopping_list_item_button" onclick="add_to_shopping_list()" >Add to Shopping List</button>
       <form id=addToformId>
-        Title: <input type="text" name="title">
+        Title: <input type="text" name="title" id="titleId" value="Item Name">
         <br>
-        Description: <input type="text" name="description">
+        Description: <input type="text" name="description" id="descriptionId" value="Item Description">
       </form>
   </body>
 </html>

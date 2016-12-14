@@ -88,7 +88,7 @@ describe('ShoppingListItem', ()=>{
       let newSpan = document.createElement('span');
       newLi.appendChild(newSpan);
 
-      let currentDiv = document.getElementById('');
+      let currentDiv = document.getElementById('content');
       document.body.insertBefore(newLi, currentDiv);
     });
   });
