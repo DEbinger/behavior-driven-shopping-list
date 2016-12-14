@@ -99,33 +99,41 @@ describe('ShoppingListItem', ()=>{
 
 describe('ShoppingList', ()=>{
 
+  let shoppingList;
+
+  beforeEach(() =>{
+    shoppingList = new ShoppingList();
+  });
+
   it('should be a class', ()=>{
     ShoppingList.should.be.a.function;
   });
 
   it('should have a property named items',()=>{
-    ShoppingList.should.have.a.property('items');
+    shoppingList.should.have.a.property('items');
   });
 
   it('should contain an empty array', ()=> {
-    ShoppingList.items.should.be.an('array');
+    shoppingList.items.should.be.an('array');
   });
 
   it('should have a method named addItem', ()=>{
-    ShoppingList.addItem.should.be.a('function');
+    shoppingList.addItem.should.be.a('function');
   });
 
-  it('should add SLItem to the array', ()=>{
+  it('should add Shopping List Item to the array', ()=>{
     let slItem = new ShoppingListItem('SLItem', 'Item to add to shopping list');
-    ShoppingList.addItem(slItem);
-    ShoppingList.items.should.contain(slItem);
+    shoppingList.addItem(slItem);
+    shoppingList.items.should.contain(slItem);
   });
 
-  it('shoud have a method named removeItem',()=>{
-    ShoppingList.removeItem.should.be.a('function');
+  it('should have a method named removeItem',()=>{
+    shoppingList.removeItem.should.be.a('function');
   });
-//ShoppingList has a method named removeItem that accepts a single ShoppingListItem argument
 
+  it('should have a method named render', ()=>{
+    shoppingList.render.should.be.a('function');
+  });
 //invoking the removeItem method by passing in a ShoppingListItem object (that exists in the items array) should remove that object from the items array
 
 //invoking the removeItem method with no parameters should remove the last item in the items list, if there are any items, else it does nothing
