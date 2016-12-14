@@ -97,9 +97,11 @@ describe('ShoppingListItem', ()=>{
 
 //ShoppingList is a class
 
+
+
 describe('ShoppingList', ()=>{
 
-  let sl = new ShoppingList();
+let sl = new ShoppingList();
 
 //ShoppingList is a class
 
@@ -119,7 +121,7 @@ describe('ShoppingList', ()=>{
 
   describe('addItem', ()=>{
     it('should have a method named "addItem" that accepts a single ShoppingListItem as an argument', ()=>{
-      ShoppingList.addItem().should.be.a.function;
+      expect(sl.addItem).to.be.a('function');
     });
       it('should be an instance of ShoppingListItem', ()=>{
       item.should.be.an.instanceof(ShoppingListItem);
