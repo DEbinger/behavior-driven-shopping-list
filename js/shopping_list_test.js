@@ -101,11 +101,7 @@ describe('ShoppingListItem', ()=>{
 
 describe('ShoppingList', ()=>{
 
-<<<<<<< HEAD
-let sl = new ShoppingList();
-=======
-  let shoppingList;
->>>>>>> 9adf9e51aa2a8c3933d743338716e51176da182f
+  let sl = new ShoppingList();
 
   beforeEach(() =>{
     shoppingList = new ShoppingList();
@@ -119,39 +115,39 @@ let sl = new ShoppingList();
     shoppingList.should.have.a.property('items');
   });
 
-<<<<<<< HEAD
 //ShoppingList has a method named addItem that accepts a single ShoppingListItem argument
 
   describe('addItem', ()=>{
     it('should have a method named "addItem" that accepts a single ShoppingListItem as an argument', ()=>{
       expect(sl.addItem).to.be.a('function');
     });
-      it('should be an instance of ShoppingListItem', ()=>{
-      item.should.be.an.instanceof(ShoppingListItem);
+    it('should contain an empty array', ()=> {
+      shoppingList.items.should.be.an('array');
     });
-=======
-  it('should contain an empty array', ()=> {
-    shoppingList.items.should.be.an('array');
->>>>>>> 9adf9e51aa2a8c3933d743338716e51176da182f
+
+    it('should have a method named addItem', ()=>{
+      shoppingList.addItem.should.be.a('function');
+    });
+
+    it('should add Shopping List Item to the array', ()=>{
+      let slItem = new ShoppingListItem('SLItem', 'Item to add to shopping list');
+      shoppingList.addItem(slItem);
+      shoppingList.items.should.contain(slItem);
+    });
   });
 
-  it('should have a method named addItem', ()=>{
-    shoppingList.addItem.should.be.a('function');
+  describe('removeItem', ()=>{
+    it('should have a method named removeItem',()=>{
+      shoppingList.removeItem.should.be.a('function');
+    });
   });
 
-  it('should add Shopping List Item to the array', ()=>{
-    let slItem = new ShoppingListItem('SLItem', 'Item to add to shopping list');
-    shoppingList.addItem(slItem);
-    shoppingList.items.should.contain(slItem);
+  describe('render', ()=>{
+    it('should have a method named render', ()=>{
+      shoppingList.render.should.be.a('function');
+    });
   });
 
-  it('should have a method named removeItem',()=>{
-    shoppingList.removeItem.should.be.a('function');
-  });
-
-  it('should have a method named render', ()=>{
-    shoppingList.render.should.be.a('function');
-  });
 //invoking the removeItem method by passing in a ShoppingListItem object (that exists in the items array) should remove that object from the items array
 
 //invoking the removeItem method with no parameters should remove the last item in the items list, if there are any items, else it does nothing
@@ -161,4 +157,5 @@ let sl = new ShoppingList();
 //ShoppingList has a method named render
 
 //calling the instance's render method will concatenate the result of calling render() on each item in this object's items array, wrapping it in a <ul> tags, and returning an html formatted string. ex: <ul>...[all the li elements from ShoppingListItem.render()]...</ul>
+
 });
