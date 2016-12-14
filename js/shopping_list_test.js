@@ -82,7 +82,7 @@ describe('ShoppingListItem', ()=>{
 
     //hint: Use ES6 string templates for your render method
 
-  describe('render', () => {
+  describe('render', ()=>{
     it('should have a method named "render"', ()=>{
       let newLi = document.createElement('li');
       let newSpan = document.createElement('span');
