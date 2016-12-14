@@ -74,7 +74,7 @@ describe('ShoppingListItem', ()=>{
   //ShoppingListItem has a method named render
 
       /*calling the instance's render method will construct and return an html formatted string. the string content will be wrapped in <li> tags.
-      example: 
+      example:
       <li class="completed_false">
         <span>Avocado</span>
         <span>Must be eaten immediately.</span>
@@ -95,28 +95,31 @@ describe('ShoppingListItem', ()=>{
 
 });
 
-//ShoppingList is a class
+
 
 
 
 describe('ShoppingList', ()=>{
 
+<<<<<<< HEAD
 let sl = new ShoppingList();
+=======
+  let shoppingList;
+>>>>>>> 9adf9e51aa2a8c3933d743338716e51176da182f
 
-//ShoppingList is a class
+  beforeEach(() =>{
+    shoppingList = new ShoppingList();
+  });
 
   it('should be a class', ()=>{
     ShoppingList.should.be.a.function;
   });
 
-//ShoppingList has a property named items
-
-//ShoppingList has a constructor method that initializes items as an empty Array
-
-  it('should have a property named "items" to be an empty "array"',()=>{
-    expect(sl).to.have.property('items').to.be.an('array');
+  it('should have a property named items',()=>{
+    shoppingList.should.have.a.property('items');
   });
 
+<<<<<<< HEAD
 //ShoppingList has a method named addItem that accepts a single ShoppingListItem argument
 
   describe('addItem', ()=>{
@@ -126,21 +129,29 @@ let sl = new ShoppingList();
       it('should be an instance of ShoppingListItem', ()=>{
       item.should.be.an.instanceof(ShoppingListItem);
     });
+=======
+  it('should contain an empty array', ()=> {
+    shoppingList.items.should.be.an('array');
+>>>>>>> 9adf9e51aa2a8c3933d743338716e51176da182f
   });
 
-
-//invoking the addItem method by passing in a ShoppingListItem object should add that object to the items array
-/*  it('should have a method named "addItem" that accepts a single ShoppingListItem argument');
-  expect(sl).to.have.property('ShoppingListItem');
-
-//invoking the addItem method by passing in anything else that is not a ShoppingListItem object should immediately throw an error
-  it('should throw an error when invoking the "addItem method',()=>{
-    if('this.item')
-    expect(sl).to.throw(Error);
+  it('should have a method named addItem', ()=>{
+    shoppingList.addItem.should.be.a('function');
   });
-*/
-//ShoppingList has a method named removeItem that accepts a single ShoppingListItem argument
 
+  it('should add Shopping List Item to the array', ()=>{
+    let slItem = new ShoppingListItem('SLItem', 'Item to add to shopping list');
+    shoppingList.addItem(slItem);
+    shoppingList.items.should.contain(slItem);
+  });
+
+  it('should have a method named removeItem',()=>{
+    shoppingList.removeItem.should.be.a('function');
+  });
+
+  it('should have a method named render', ()=>{
+    shoppingList.render.should.be.a('function');
+  });
 //invoking the removeItem method by passing in a ShoppingListItem object (that exists in the items array) should remove that object from the items array
 
 //invoking the removeItem method with no parameters should remove the last item in the items list, if there are any items, else it does nothing
