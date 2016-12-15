@@ -1,5 +1,7 @@
 /*jshint esversion: 6*/
 
+console.log("2. list test");
+
 class ShoppingList {
   constructor(items) {
     this.items = [];
@@ -30,4 +32,5 @@ class ShoppingList {
   }
    return `<ul>${newList}</ul>`;
   }
+
 }

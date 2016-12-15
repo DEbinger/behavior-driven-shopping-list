@@ -84,12 +84,7 @@ describe('ShoppingListItem', ()=>{
 
   describe('render', ()=>{
     it('should have a method named "render"', ()=>{
-      let newLi = document.createElement('li');
-      let newSpan = document.createElement('span');
-      newLi.appendChild(newSpan);
 
-      let currentDiv = document.getElementById('content');
-      document.body.insertBefore(newLi, currentDiv);
     });
   });
 

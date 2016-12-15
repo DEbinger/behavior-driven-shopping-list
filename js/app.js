@@ -1,4 +1,8 @@
 /* jshint esversion: 6 */
+
+console.log('sanity check');
+console.log(window);
+console.log("3. app.js test");
 let shoppingListNew = new ShoppingList();
 document.getElementById("content").innerHTML = shoppingList.render();
 
@@ -14,11 +18,10 @@ function addToShoppingList(){
 
   var test = document.getElementsByClassName(descriptionValue);
   console.log(test);
-  test.addEventListener("click", () => {
+  test.addEventListener("click", ()=>{
     removeItemButtonClicked(shoppingListNew.items.indexOf(new_shopping_list_item));
   });
 }
-
 
 
 function changeCheckedStatus(idx, checkbox){
@@ -30,6 +33,7 @@ function changeCheckedStatus(idx, checkbox){
     shoppingListNew.items[idx].uncheck();
   }
 }
+
 
 function removeItemButtonClicked(idx){
 

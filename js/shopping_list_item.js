@@ -1,5 +1,7 @@
 /*jshint esversion: 6*/
 
+console.log("1. item test");
+
 class ShoppingListItem {
   constructor(name, description){
     this.name = name;
@@ -16,8 +18,12 @@ class ShoppingListItem {
   }
 
   render(){
+    let newLi = document.createElement('li');
+    let newSpan = document.createElement('span');
+    newLi.appendChild(newSpan);
 
-  }
-
+    let currentDiv = document.getElementById('content');
+    document.body.insertBefore(newLi, currentDiv);
 }
 
+}
