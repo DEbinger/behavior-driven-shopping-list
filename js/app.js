@@ -3,26 +3,32 @@
 console.log("3. app.js test");
 
 let shoppingListNew = new ShoppingList();
-let itemName = document.getElementById("itemName").value;
-let descriptionValue = document.getElementById("descriptionId").value;
+const contentContainer = document.getElementById('content');
 
-document.getElementById("add_shopping_list_item_button").addEventListener('click', shoppingListNew.addItem());
+document.getElementById("add_shopping_list_item_button").addEventListener('click', addToShoppingList);
+
 document.getElementById("content").innerHTML = shoppingListNew.render();
 
 
 function addToShoppingList(){
-
+  let titleValue = document.getElementById("titleId").value;
+let descriptionValue = document.getElementById("descriptionId").value;
   let new_shopping_list_item = new ShoppingListItem(titleValue, descriptionValue);
-  shoppingListNew.addItem(new_shopping_list_item);
-  document.getElementById("content").innerHTML = shoppingListNew.render();
+console.log(new_shopping_list_item);
 
+  shoppingListNew.addItem(new_shopping_list_item);
+
+let itemListTemp = new_shopping_list_item.render();
+console.log(itemListTemp);
+contentContainer.appendChild(itemListTemp);
+/*
   var test = document.getElementsByClassName(descriptionValue);
 
   test.addEventListener("click", ()=>{
     removeItemButtonClicked(shoppingListNew.items.indexOf(new_shopping_list_item));
   });
+*/
 }
-
 
 function changeCheckedStatus(idx, checkbox){
 

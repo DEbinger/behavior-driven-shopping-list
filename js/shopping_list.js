@@ -13,6 +13,7 @@ class ShoppingList {
     }else{
       throw new Error('Item added is not valid for the shopping list, please try again');
     }
+    console.log(this.items);
   }
 
   removeItem(item) {

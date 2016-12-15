@@ -19,13 +19,17 @@ class ShoppingListItem {
 
   render(){
     let newLi = document.createElement('li');
+    newLi.innerHTML = this.name+this.description;
+    return newLi;
+
+    /*
     let newSpan = document.createElement('span');
     newLi.appendChild(newSpan);
 
     let currentDiv = document.getElementById('content');
-    document.body.insertBefore(newLi, currentDiv);
-
-    return item;
+    document.body.insertBefore(newLi, currentDiv)*/
+/*    console.log('item');
+    return item;*/
 }
 
 }
