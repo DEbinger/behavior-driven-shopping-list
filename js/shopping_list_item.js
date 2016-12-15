@@ -19,7 +19,10 @@ class ShoppingListItem {
 
   render(){
     let newLi = document.createElement('li');
-    newLi.innerHTML = this.name+this.description;
+    newLi.innerHTML = this.name + ' ' + '(' + this.description + ')';
+    let newCheckbox = document.createElement('input');
+    newCheckbox.type = 'checkbox';
+    newLi.appendChild(newCheckbox);
     return newLi;
 
     /*
