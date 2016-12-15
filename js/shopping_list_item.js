@@ -22,6 +22,8 @@ class ShoppingListItem {
     newLi.innerHTML = this.name + ' ' + '(' + this.description + ')';
     let newCheckbox = document.createElement('input');
     newCheckbox.type = 'checkbox';
+    newCheckbox.id = 'checkbox';
+    newCheckbox.addEventListener('onchange', changeCheckedStatus);
     newLi.appendChild(newCheckbox);
     return newLi;
 
