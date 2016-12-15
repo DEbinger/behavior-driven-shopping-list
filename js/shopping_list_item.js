@@ -25,6 +25,12 @@ class ShoppingListItem {
     newCheckbox.id = 'checkbox';
     newCheckbox.addEventListener('onchange', changeCheckedStatus);
     newLi.appendChild(newCheckbox);
+    let newRemoveBtn = document.createElement('button');
+    newRemoveBtn.type = 'button';
+    newRemoveBtn.addEventListener('click', removeItemButtonClicked);
+    newRemoveBtn.innerHTML = 'x';
+    newLi.appendChild(newRemoveBtn);
+
     return newLi;
 
     /*
