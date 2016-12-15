@@ -24,6 +24,8 @@ class ShoppingListItem {
 
     let currentDiv = document.getElementById('content');
     document.body.insertBefore(newLi, currentDiv);
+
+    return item;
 }
 
 }

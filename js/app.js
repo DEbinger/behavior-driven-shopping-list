@@ -1,23 +1,23 @@
 /* jshint esversion: 6 */
 
-console.log('sanity check');
-console.log(window);
 console.log("3. app.js test");
+
 let shoppingListNew = new ShoppingList();
-document.getElementById("content").innerHTML = shoppingList.render();
+let itemName = document.getElementById("itemName").value;
+let descriptionValue = document.getElementById("descriptionId").value;
+
+document.getElementById("add_shopping_list_item_button").addEventListener('click', shoppingListNew.addItem());
+document.getElementById("content").innerHTML = shoppingListNew.render();
 
 
 function addToShoppingList(){
-
-  let titleValue = document.getElementById("titleId").value;
-  let descriptionValue = document.getElementById("descriptionId").value;
 
   let new_shopping_list_item = new ShoppingListItem(titleValue, descriptionValue);
   shoppingListNew.addItem(new_shopping_list_item);
   document.getElementById("content").innerHTML = shoppingListNew.render();
 
   var test = document.getElementsByClassName(descriptionValue);
-  console.log(test);
+
   test.addEventListener("click", ()=>{
     removeItemButtonClicked(shoppingListNew.items.indexOf(new_shopping_list_item));
   });
@@ -27,7 +27,7 @@ function addToShoppingList(){
 function changeCheckedStatus(idx, checkbox){
 
   if(checkbox.checked === true){
-    console.log(checkbox.checked);
+
     shoppingListNew.items[idx].checked();
   } else if(checkbox.checked === false){
     shoppingListNew.items[idx].uncheck();

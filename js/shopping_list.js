@@ -26,11 +26,11 @@ class ShoppingList {
   }
 
   render(){
-    let renderList = '';
+    let renderList = [];
     for (var i = 0; i < this.items.length; i++) {
     renderList += this.items[i].render();
-  }
-   return `<ul>${newList}</ul>`;
+    }
+    return renderList;
   }
 
 }
