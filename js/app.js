@@ -18,9 +18,15 @@ console.log(new_shopping_list_item);
 
   shoppingListNew.addItem(new_shopping_list_item);
 
-let itemListTemp = new_shopping_list_item.render();
-console.log(itemListTemp);
-contentContainer.appendChild(itemListTemp);
+let itemList = shoppingListNew.render();
+console.log(itemList);
+
+contentContainer.innerHTML = '';
+
+for (var i = 0; i < itemList.length; i++) {
+  contentContainer.appendChild(itemList[i]);
+}
+//contentContainer.appendChild(itemList);
 /*
   var test = document.getElementsByClassName(descriptionValue);
 
