@@ -3,6 +3,7 @@
 console.log("2. list test");
 
 class ShoppingList {
+  
   constructor(items) {
     this.items = [];
   }
@@ -13,7 +14,6 @@ class ShoppingList {
     }else{
       throw new Error('Item added is not valid for the shopping list, please try again');
     }
-    console.log(this.items);
   }
 
   removeItem(item) {
@@ -31,8 +31,6 @@ class ShoppingList {
     for (var i = 0; i < this.items.length; i++) {
     renderList.push (this.items[i].render());
     }
-
     return renderList;
   }
-
 }

@@ -3,6 +3,7 @@
 console.log("1. item test");
 
 class ShoppingListItem {
+  
   constructor(name, description){
     this.name = name;
     this.description = description;
@@ -30,17 +31,6 @@ class ShoppingListItem {
     newRemoveBtn.addEventListener('click', removeItemButtonClicked);
     newRemoveBtn.innerHTML = 'x';
     newLi.appendChild(newRemoveBtn);
-
     return newLi;
-
-    /*
-    let newSpan = document.createElement('span');
-    newLi.appendChild(newSpan);
-
-    let currentDiv = document.getElementById('content');
-    document.body.insertBefore(newLi, currentDiv)*/
-/*    console.log('item');
-    return item;*/
-}
-
+  }
 }
